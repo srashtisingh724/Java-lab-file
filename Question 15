@@ -1,0 +1,36 @@
+MYTAGS.TLD code : 
+<tlib-version>1.0</tlib-version> 
+<short-name>mytags</short-name> 
+ 
+<tag> 
+    <name>showData</name> 
+    <tag-class>com.mytags.MyTag</tag-class> 
+    <attribute> 
+        <name>name</name> 
+        <required>true</required> 
+    </attribute> 
+    <attribute> 
+        <name>age</name> 
+        <required>true</required> 
+    </attribute> 
+</tag> 
+ 
+WEB.xml code : 
+<jsp-config> 
+    <taglib> 
+        <taglib-uri>/mytags</taglib-uri> 
+        <taglib-location>/tlds/mytags.tld</taglib-location> 
+    </taglib> 
+</jsp-config> 
+ 
+INDEX.JSP code : 
+<%@ taglib prefix="t" uri="/mytags" %> 
+<html> 
+<body> 
+<h2>Custom Tag Output:</h2> 
+  
+<t:showData name="Srashti" age="21" /> 
+  
+</body> 
+</html> 
+Q16-
